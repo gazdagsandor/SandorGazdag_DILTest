@@ -11,11 +11,17 @@
 		B673E1AD2AC197D500FCC03B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1AC2AC197D500FCC03B /* SceneDelegate.swift */; };
 		B673E1B42AC197D700FCC03B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B673E1B32AC197D700FCC03B /* Assets.xcassets */; };
 		B673E1B72AC197D700FCC03B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B673E1B52AC197D700FCC03B /* LaunchScreen.storyboard */; };
-		B673E1C22AC197D700FCC03B /* DILTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1C12AC197D700FCC03B /* DILTestTests.swift */; };
 		B673E1CC2AC197D700FCC03B /* DILTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1CB2AC197D700FCC03B /* DILTestUITests.swift */; };
 		B673E1CE2AC197D700FCC03B /* DILTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1CD2AC197D700FCC03B /* DILTestUITestsLaunchTests.swift */; };
 		B673E1DF2AC199DD00FCC03B /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1DE2AC199DD00FCC03B /* CanvasViewController.swift */; };
 		B673E1E52AC19ABA00FCC03B /* Canvas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B673E1E42AC19ABA00FCC03B /* Canvas.storyboard */; };
+		B673E1EA2AC19CFF00FCC03B /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1E92AC19CFF00FCC03B /* CanvasView.swift */; };
+		B673E1EC2AC1A12A00FCC03B /* DrawingPathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1EB2AC1A12A00FCC03B /* DrawingPathTests.swift */; };
+		B673E1EE2AC1B4CF00FCC03B /* DrawingToolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1ED2AC1B4CF00FCC03B /* DrawingToolTests.swift */; };
+		B673E1F02AC1B7BC00FCC03B /* DrawingPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1EF2AC1B7BC00FCC03B /* DrawingPointTests.swift */; };
+		B673E1F22AC2C98500FCC03B /* DrawingTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1F12AC2C98500FCC03B /* DrawingTool.swift */; };
+		B673E1F42AC2C99900FCC03B /* DrawingPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1F32AC2C99900FCC03B /* DrawingPath.swift */; };
+		B673E1F62AC2C9B100FCC03B /* DrawingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1F52AC2C9B100FCC03B /* DrawingPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,12 +49,18 @@
 		B673E1B62AC197D700FCC03B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B673E1B82AC197D700FCC03B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B673E1BD2AC197D700FCC03B /* DILTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DILTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B673E1C12AC197D700FCC03B /* DILTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DILTestTests.swift; sourceTree = "<group>"; };
 		B673E1C72AC197D700FCC03B /* DILTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DILTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B673E1CB2AC197D700FCC03B /* DILTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DILTestUITests.swift; sourceTree = "<group>"; };
 		B673E1CD2AC197D700FCC03B /* DILTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DILTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B673E1DE2AC199DD00FCC03B /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 		B673E1E42AC19ABA00FCC03B /* Canvas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Canvas.storyboard; sourceTree = "<group>"; };
+		B673E1E92AC19CFF00FCC03B /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		B673E1EB2AC1A12A00FCC03B /* DrawingPathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPathTests.swift; sourceTree = "<group>"; };
+		B673E1ED2AC1B4CF00FCC03B /* DrawingToolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingToolTests.swift; sourceTree = "<group>"; };
+		B673E1EF2AC1B7BC00FCC03B /* DrawingPointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPointTests.swift; sourceTree = "<group>"; };
+		B673E1F12AC2C98500FCC03B /* DrawingTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingTool.swift; sourceTree = "<group>"; };
+		B673E1F32AC2C99900FCC03B /* DrawingPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPath.swift; sourceTree = "<group>"; };
+		B673E1F52AC2C9B100FCC03B /* DrawingPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +120,9 @@
 		B673E1C02AC197D700FCC03B /* DILTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				B673E1C12AC197D700FCC03B /* DILTestTests.swift */,
+				B673E1EB2AC1A12A00FCC03B /* DrawingPathTests.swift */,
+				B673E1ED2AC1B4CF00FCC03B /* DrawingToolTests.swift */,
+				B673E1EF2AC1B7BC00FCC03B /* DrawingPointTests.swift */,
 			);
 			path = DILTestTests;
 			sourceTree = "<group>";
@@ -146,9 +160,29 @@
 			isa = PBXGroup;
 			children = (
 				B673E1DE2AC199DD00FCC03B /* CanvasViewController.swift */,
-				B673E1E42AC19ABA00FCC03B /* Canvas.storyboard */,
+				B673E1F72AC2C9CB00FCC03B /* Model */,
+				B673E1F82AC2C9D500FCC03B /* View */,
 			);
 			path = Canvas;
+			sourceTree = "<group>";
+		};
+		B673E1F72AC2C9CB00FCC03B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B673E1F12AC2C98500FCC03B /* DrawingTool.swift */,
+				B673E1F32AC2C99900FCC03B /* DrawingPath.swift */,
+				B673E1F52AC2C9B100FCC03B /* DrawingPoint.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B673E1F82AC2C9D500FCC03B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B673E1E42AC19ABA00FCC03B /* Canvas.storyboard */,
+				B673E1E92AC19CFF00FCC03B /* CanvasView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +318,10 @@
 			files = (
 				B673E1AB2AC197D500FCC03B /* AppDelegate.swift in Sources */,
 				B673E1DF2AC199DD00FCC03B /* CanvasViewController.swift in Sources */,
+				B673E1EA2AC19CFF00FCC03B /* CanvasView.swift in Sources */,
+				B673E1F42AC2C99900FCC03B /* DrawingPath.swift in Sources */,
+				B673E1F62AC2C9B100FCC03B /* DrawingPoint.swift in Sources */,
+				B673E1F22AC2C98500FCC03B /* DrawingTool.swift in Sources */,
 				B673E1AD2AC197D500FCC03B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +330,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B673E1C22AC197D700FCC03B /* DILTestTests.swift in Sources */,
+				B673E1F02AC1B7BC00FCC03B /* DrawingPointTests.swift in Sources */,
+				B673E1EE2AC1B4CF00FCC03B /* DrawingToolTests.swift in Sources */,
+				B673E1EC2AC1A12A00FCC03B /* DrawingPathTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
