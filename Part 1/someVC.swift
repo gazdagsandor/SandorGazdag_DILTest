@@ -11,10 +11,13 @@ class someVC: UIViewController,UICollectionViewDelegate,UICollectionViewDelegate
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var detailView: UIView!
     
-    weak var collectionViewTopConstraint: NSLayoutConstraint! var detailViewWidthConstraint: NSLayoutConstraint!
+    weak var collectionViewTopConstraint: NSLayoutConstraint!
+    var detailViewWidthConstraint: NSLayoutConstraint!
     var collectionView: UICollectionView!
     var detailView: UIView!
-    var detailVC : UIViewController? var dataArray : [Any]?
+
+    var detailVC : UIViewController?
+    var dataArray : [Any]?
     
     override func viewWillAppear(_ animated: Bool) {
         
