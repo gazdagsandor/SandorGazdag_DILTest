@@ -16,12 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7F7-2m-Fho" customClass="CanvasView" customModule="adasd" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7F7-2m-Fho" customClass="CanvasView" customModule="DILTest" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="59" width="393" height="679"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwN-ju-Lc3">
                                 <rect key="frame" x="16" y="754" width="78.333333333333329" height="33.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33.333333333333371" id="lbS-1G-f3h"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="RED">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
@@ -78,10 +81,10 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7F7-2m-Fho" secondAttribute="trailing" id="LuK-yQ-5LN"/>
                             <constraint firstItem="TwN-ju-Lc3" firstAttribute="centerY" secondItem="Whw-iJ-f8j" secondAttribute="centerY" id="SoR-ag-Boj"/>
                             <constraint firstItem="xFU-b8-dXC" firstAttribute="top" secondItem="7F7-2m-Fho" secondAttribute="bottom" constant="16" id="WIb-99-h1L"/>
+                            <constraint firstItem="TwN-ju-Lc3" firstAttribute="top" secondItem="7F7-2m-Fho" secondAttribute="bottom" constant="16" id="ear-jS-NEm"/>
                             <constraint firstItem="pcs-YB-Asc" firstAttribute="leading" secondItem="xFU-b8-dXC" secondAttribute="trailing" constant="16" id="hhm-Fw-XDD"/>
                             <constraint firstItem="7F7-2m-Fho" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="iKI-w7-NiV"/>
                             <constraint firstItem="TwN-ju-Lc3" firstAttribute="width" secondItem="xFU-b8-dXC" secondAttribute="width" id="lqT-ek-ZhS"/>
-                            <constraint firstItem="TwN-ju-Lc3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="695" id="qXe-L4-dqn"/>
                             <constraint firstItem="TwN-ju-Lc3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="qda-PO-nMF"/>
                             <constraint firstItem="xFU-b8-dXC" firstAttribute="width" secondItem="pcs-YB-Asc" secondAttribute="width" id="saj-zc-58H"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Whw-iJ-f8j" secondAttribute="trailing" constant="16" id="wyh-tc-9o5"/>

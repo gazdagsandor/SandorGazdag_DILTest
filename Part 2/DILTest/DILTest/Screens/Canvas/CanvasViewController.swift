@@ -15,6 +15,13 @@ class CanvasViewController: UIViewController {
     @IBOutlet weak var greenButton: UIButton?
     @IBOutlet weak var eraseButton: UIButton?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        canvasView?.drawingManager = DrawingManager()
+        canvasView?.drawingManager?.delegate = canvasView
+    }
+    
     @IBAction func redButtonPressed() {
         canvasView?.selectedTool = .red
     }
@@ -28,7 +35,9 @@ class CanvasViewController: UIViewController {
     }
     
     @IBAction func eraseButtonPressed() {
-        let eraser = DrawingTool(color: .clear, delay: 2.0) { [weak self] in
+        var eraser = DrawingTool.eraseAll
+        eraser.baseTime = CFAbsoluteTimeGetCurrent()
+        eraser.action = { [weak self] in
             self?.canvasView?.eraseAll()
         }
         canvasView?.activate(tool: eraser)

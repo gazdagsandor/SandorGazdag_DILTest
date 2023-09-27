@@ -22,6 +22,9 @@
 		B673E1F22AC2C98500FCC03B /* DrawingTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1F12AC2C98500FCC03B /* DrawingTool.swift */; };
 		B673E1F42AC2C99900FCC03B /* DrawingPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1F32AC2C99900FCC03B /* DrawingPath.swift */; };
 		B673E1F62AC2C9B100FCC03B /* DrawingPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1F52AC2C9B100FCC03B /* DrawingPoint.swift */; };
+		B673E1FA2AC2E3E100FCC03B /* DrawingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1F92AC2E3E100FCC03B /* DrawingManager.swift */; };
+		B673E1FC2AC3345F00FCC03B /* DrawingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1FB2AC3345F00FCC03B /* DrawingManagerTests.swift */; };
+		B673E1FF2AC334CE00FCC03B /* MockDrawingManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1FE2AC334CE00FCC03B /* MockDrawingManagerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		B673E1F12AC2C98500FCC03B /* DrawingTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingTool.swift; sourceTree = "<group>"; };
 		B673E1F32AC2C99900FCC03B /* DrawingPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPath.swift; sourceTree = "<group>"; };
 		B673E1F52AC2C9B100FCC03B /* DrawingPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPoint.swift; sourceTree = "<group>"; };
+		B673E1F92AC2E3E100FCC03B /* DrawingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingManager.swift; sourceTree = "<group>"; };
+		B673E1FB2AC3345F00FCC03B /* DrawingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingManagerTests.swift; sourceTree = "<group>"; };
+		B673E1FE2AC334CE00FCC03B /* MockDrawingManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDrawingManagerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,9 +126,11 @@
 		B673E1C02AC197D700FCC03B /* DILTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				B673E1FD2AC334B900FCC03B /* Mock */,
 				B673E1EB2AC1A12A00FCC03B /* DrawingPathTests.swift */,
 				B673E1ED2AC1B4CF00FCC03B /* DrawingToolTests.swift */,
 				B673E1EF2AC1B7BC00FCC03B /* DrawingPointTests.swift */,
+				B673E1FB2AC3345F00FCC03B /* DrawingManagerTests.swift */,
 			);
 			path = DILTestTests;
 			sourceTree = "<group>";
@@ -181,8 +189,17 @@
 			children = (
 				B673E1E42AC19ABA00FCC03B /* Canvas.storyboard */,
 				B673E1E92AC19CFF00FCC03B /* CanvasView.swift */,
+				B673E1F92AC2E3E100FCC03B /* DrawingManager.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B673E1FD2AC334B900FCC03B /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				B673E1FE2AC334CE00FCC03B /* MockDrawingManagerDelegate.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +339,7 @@
 				B673E1F42AC2C99900FCC03B /* DrawingPath.swift in Sources */,
 				B673E1F62AC2C9B100FCC03B /* DrawingPoint.swift in Sources */,
 				B673E1F22AC2C98500FCC03B /* DrawingTool.swift in Sources */,
+				B673E1FA2AC2E3E100FCC03B /* DrawingManager.swift in Sources */,
 				B673E1AD2AC197D500FCC03B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,8 +348,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B673E1FF2AC334CE00FCC03B /* MockDrawingManagerDelegate.swift in Sources */,
 				B673E1F02AC1B7BC00FCC03B /* DrawingPointTests.swift in Sources */,
 				B673E1EE2AC1B4CF00FCC03B /* DrawingToolTests.swift in Sources */,
+				B673E1FC2AC3345F00FCC03B /* DrawingManagerTests.swift in Sources */,
 				B673E1EC2AC1A12A00FCC03B /* DrawingPathTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

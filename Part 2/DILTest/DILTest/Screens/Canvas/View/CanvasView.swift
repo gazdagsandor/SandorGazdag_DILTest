@@ -13,13 +13,17 @@ class CanvasView: UIView {
         static let defaultWidth: CGFloat = 2.0
     }
     
-    var referenceLines: [DrawingPath] = []
-    var drawingLines: [DrawingPath] = []
-    var selectedTool: DrawingTool?
+    var selectedTool: DrawingTool? {
+        didSet {
+            drawingManager?.selectedTool = selectedTool
+        }
+    }
     var lineWidth: CGFloat = Constants.defaultWidth
     
     let drawQueue: DispatchQueue = DispatchQueue(label: "com.drawing.queue")
     var workItems: [DispatchWorkItem] = []
+    
+    var drawingManager: DrawingManager?
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
@@ -28,8 +32,8 @@ class CanvasView: UIView {
             return
         }
         
-        drawingLines.forEach { (line) in
-            for (index, point) in (line.points?.enumerated())! {
+        drawingManager?.drawingLines.forEach { (line) in
+            for (index, point) in line.drawablePoints.enumerated() {
                 let destinationPoint = CGPoint(x: point.x, y: point.y)
                 if index == .zero {
                     context.move(to: destinationPoint)
@@ -45,52 +49,32 @@ class CanvasView: UIView {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let selectedTool = selectedTool else {
-            return
-        }
-        let path = DrawingPath(tool: selectedTool, points: [])
-        drawingLines.append(path)
-        referenceLines.append(path)
+        drawingManager?.beginDrawing()
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let selectedTool = selectedTool, let touchPoint = touches.first?.location(in: self) else {
+        guard let touchPoint = touches.first?.location(in: self) else {
             return
         }
-        guard var lastLine = referenceLines.popLast() else {
-            return
-        }
-        lastLine.points?.append(DrawingPoint(point: touchPoint, time: CACurrentMediaTime()))
-        lastLine.tool = selectedTool
-        referenceLines.append(lastLine)
-        
-        let workItem = DispatchWorkItem { [weak self] in
-            self?.drawingLines.append(lastLine)
-            DispatchQueue.main.async {
-                self?.setNeedsDisplay()
-            }
-        }
-        workItems.append(workItem)
-        drawQueue.asyncAfter(deadline: .now() + .seconds(Int(selectedTool.delay)), execute: workItem)
+        drawingManager?.addNewDrawingPoint(touchPoint)
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        drawingManager?.finishDrawing()
     }
     
     func activate(tool: DrawingTool) {
-        guard tool.delay > .zero else {
-            tool.action?()
-            return
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(Int(tool.delay))) {
-            tool.action?()
-        }
+        drawingManager?.activate(tool: tool)
     }
     
     func eraseAll() {
-        workItems.forEach { $0.cancel() }
-        drawingLines = []
-        referenceLines = []
-        setNeedsDisplay()
+        drawingManager?.eraseAll()
     }
 }
 
+extension CanvasView: DrawingManagerDelegate {
 
-
+    func pathsDidChange() {
+        setNeedsDisplay()
+    }
+}
