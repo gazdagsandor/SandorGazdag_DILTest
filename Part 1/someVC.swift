@@ -10,11 +10,6 @@ class someVC: UIViewController,UICollectionViewDelegate,UICollectionViewDelegate
     @IBOutlet var detailViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var detailView: UIView!
-    
-    weak var collectionViewTopConstraint: NSLayoutConstraint!
-    var detailViewWidthConstraint: NSLayoutConstraint!
-    var collectionView: UICollectionView!
-    var detailView: UIView!
 
     var detailVC : UIViewController?
     var dataArray : [Any]?
