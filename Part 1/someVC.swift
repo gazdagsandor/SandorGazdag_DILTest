@@ -16,7 +16,9 @@ class someVC: UIViewController,UICollectionViewDelegate,UICollectionViewDelegate
     var detailView: UIView!
     var detailVC : UIViewController? var dataArray : [Any]?
     
-    override func viewWillAppear(_ animated: Bool) { fetchData()
+    override func viewWillAppear(_ animated: Bool) {
+        
+        fetchData()
         
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
