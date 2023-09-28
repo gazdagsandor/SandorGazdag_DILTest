@@ -9,9 +9,13 @@ import UIKit
 
 class CanvasView: UIView {
     
+    // MARK: - Constants
+    
     private struct Constants {
         static let defaultWidth: CGFloat = 2.0
     }
+    
+    // MARK: - Properties
     
     var selectedTool: DrawingTool? {
         didSet {
@@ -20,10 +24,9 @@ class CanvasView: UIView {
     }
     var lineWidth: CGFloat = Constants.defaultWidth
     
-    let drawQueue: DispatchQueue = DispatchQueue(label: "com.drawing.queue")
-    var workItems: [DispatchWorkItem] = []
-    
     var drawingManager: DrawingManager?
+    
+    // MARK: - Lifecycle
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
@@ -47,6 +50,18 @@ class CanvasView: UIView {
             context.strokePath()
         }
     }
+
+    // MARK: - Helpers
+
+    func activate(tool: DrawingTool) {
+        drawingManager?.activate(tool: tool)
+    }
+    
+    func eraseAll() {
+        drawingManager?.eraseAll()
+    }
+    
+    // MARK: - Touch handling
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         drawingManager?.beginDrawing()
@@ -61,14 +76,6 @@ class CanvasView: UIView {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         drawingManager?.finishDrawing()
-    }
-    
-    func activate(tool: DrawingTool) {
-        drawingManager?.activate(tool: tool)
-    }
-    
-    func eraseAll() {
-        drawingManager?.eraseAll()
     }
 }
 

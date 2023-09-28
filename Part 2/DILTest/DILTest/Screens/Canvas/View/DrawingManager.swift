@@ -12,10 +12,14 @@ protocol DrawingManagerDelegate: AnyObject {
 }
 
 class DrawingManager {
+    
+    // MARK: - Delegate
+    
     weak var delegate: DrawingManagerDelegate?
     
+    // MARK: - Properties
+    
     var drawingLines: [DrawingPath] = []
-
     var selectedTool: DrawingTool?
     var scheduledTool: DrawingTool?
 
@@ -94,6 +98,5 @@ class DrawingManager {
         removeTimer()
         drawingLines = []
     }
-    
 }
 

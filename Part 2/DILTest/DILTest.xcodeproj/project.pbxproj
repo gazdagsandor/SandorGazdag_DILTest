@@ -11,8 +11,6 @@
 		B673E1AD2AC197D500FCC03B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1AC2AC197D500FCC03B /* SceneDelegate.swift */; };
 		B673E1B42AC197D700FCC03B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B673E1B32AC197D700FCC03B /* Assets.xcassets */; };
 		B673E1B72AC197D700FCC03B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B673E1B52AC197D700FCC03B /* LaunchScreen.storyboard */; };
-		B673E1CC2AC197D700FCC03B /* DILTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1CB2AC197D700FCC03B /* DILTestUITests.swift */; };
-		B673E1CE2AC197D700FCC03B /* DILTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1CD2AC197D700FCC03B /* DILTestUITestsLaunchTests.swift */; };
 		B673E1DF2AC199DD00FCC03B /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1DE2AC199DD00FCC03B /* CanvasViewController.swift */; };
 		B673E1E52AC19ABA00FCC03B /* Canvas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B673E1E42AC19ABA00FCC03B /* Canvas.storyboard */; };
 		B673E1EA2AC19CFF00FCC03B /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B673E1E92AC19CFF00FCC03B /* CanvasView.swift */; };
@@ -35,13 +33,6 @@
 			remoteGlobalIDString = B673E1A62AC197D500FCC03B;
 			remoteInfo = DILTest;
 		};
-		B673E1C82AC197D700FCC03B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B673E19F2AC197D500FCC03B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B673E1A62AC197D500FCC03B;
-			remoteInfo = DILTest;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +43,6 @@
 		B673E1B62AC197D700FCC03B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B673E1B82AC197D700FCC03B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B673E1BD2AC197D700FCC03B /* DILTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DILTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B673E1C72AC197D700FCC03B /* DILTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DILTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B673E1CB2AC197D700FCC03B /* DILTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DILTestUITests.swift; sourceTree = "<group>"; };
 		B673E1CD2AC197D700FCC03B /* DILTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DILTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B673E1DE2AC199DD00FCC03B /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
@@ -84,13 +74,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B673E1C42AC197D700FCC03B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -109,7 +92,6 @@
 			children = (
 				B673E1A72AC197D500FCC03B /* DILTest.app */,
 				B673E1BD2AC197D700FCC03B /* DILTestTests.xctest */,
-				B673E1C72AC197D700FCC03B /* DILTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -240,24 +222,6 @@
 			productReference = B673E1BD2AC197D700FCC03B /* DILTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B673E1C62AC197D700FCC03B /* DILTestUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B673E1D72AC197D700FCC03B /* Build configuration list for PBXNativeTarget "DILTestUITests" */;
-			buildPhases = (
-				B673E1C32AC197D700FCC03B /* Sources */,
-				B673E1C42AC197D700FCC03B /* Frameworks */,
-				B673E1C52AC197D700FCC03B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B673E1C92AC197D700FCC03B /* PBXTargetDependency */,
-			);
-			name = DILTestUITests;
-			productName = DILTestUITests;
-			productReference = B673E1C72AC197D700FCC03B /* DILTestUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -272,10 +236,6 @@
 						CreatedOnToolsVersion = 14.3.1;
 					};
 					B673E1BC2AC197D700FCC03B = {
-						CreatedOnToolsVersion = 14.3.1;
-						TestTargetID = B673E1A62AC197D500FCC03B;
-					};
-					B673E1C62AC197D700FCC03B = {
 						CreatedOnToolsVersion = 14.3.1;
 						TestTargetID = B673E1A62AC197D500FCC03B;
 					};
@@ -296,7 +256,6 @@
 			targets = (
 				B673E1A62AC197D500FCC03B /* DILTest */,
 				B673E1BC2AC197D700FCC03B /* DILTestTests */,
-				B673E1C62AC197D700FCC03B /* DILTestUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -313,13 +272,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B673E1BB2AC197D700FCC03B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B673E1C52AC197D700FCC03B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -356,15 +308,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B673E1C32AC197D700FCC03B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B673E1CE2AC197D700FCC03B /* DILTestUITestsLaunchTests.swift in Sources */,
-				B673E1CC2AC197D700FCC03B /* DILTestUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -372,11 +315,6 @@
 			isa = PBXTargetDependency;
 			target = B673E1A62AC197D500FCC03B /* DILTest */;
 			targetProxy = B673E1BE2AC197D700FCC03B /* PBXContainerItemProxy */;
-		};
-		B673E1C92AC197D700FCC03B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B673E1A62AC197D500FCC03B /* DILTest */;
-			targetProxy = B673E1C82AC197D700FCC03B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -602,42 +540,6 @@
 			};
 			name = Release;
 		};
-		B673E1D82AC197D700FCC03B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N65URJ3238;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gazdagsandor.test.DILTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DILTest;
-			};
-			name = Debug;
-		};
-		B673E1D92AC197D700FCC03B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = N65URJ3238;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gazdagsandor.test.DILTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DILTest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -664,15 +566,6 @@
 			buildConfigurations = (
 				B673E1D52AC197D700FCC03B /* Debug */,
 				B673E1D62AC197D700FCC03B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B673E1D72AC197D700FCC03B /* Build configuration list for PBXNativeTarget "DILTestUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B673E1D82AC197D700FCC03B /* Debug */,
-				B673E1D92AC197D700FCC03B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
